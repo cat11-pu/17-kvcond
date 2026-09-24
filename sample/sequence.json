@@ -1,0 +1,10 @@
+{
+  "legacy_overwrite": true,
+  "steps": [
+    {"op": "get", "key": "a"},
+    {"op": "put", "key": "a", "value": "v1"},
+    {"op": "put", "key": "a", "value": "v2", "if_match": "stale"},
+    {"op": "put", "key": "a", "value": "v3"},
+    {"op": "get", "key": "a"}
+  ]
+}
